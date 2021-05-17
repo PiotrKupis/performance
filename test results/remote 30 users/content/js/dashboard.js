@@ -173,7 +173,7 @@ $(document).ready(function() {
     });
 
     // Creates APDEX table
-    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [1.0, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [1.0, 500, 1500, "Get booking"], "isController": false}, {"data": [1.0, 500, 1500, "Login"], "isController": false}, {"data": [1.0, 500, 1500, "Create booking"], "isController": false}]}, function(index, item){
+    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.9833333333333333, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.9833333333333333, 500, 1500, "Get booking"], "isController": false}, {"data": [1.0, 500, 1500, "Login"], "isController": false}, {"data": [0.9666666666666667, 500, 1500, "Create booking"], "isController": false}]}, function(index, item){
         switch(index){
             case 0:
                 item = item.toFixed(3);
@@ -187,7 +187,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 180, 0, 0.0, 10.877777777777776, 2, 61, 4.5, 36.900000000000006, 50.89999999999998, 60.19, 100.5586592178771, 69.15808310055866, 31.424581005586592], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["Get booking", 60, 0, 0.0, 12.533333333333331, 3, 56, 5.5, 49.59999999999998, 52.0, 56.0, 34.562211981566826, 47.91794174827189, 7.357970910138249], "isController": false}, {"data": ["Login", 60, 0, 0.0, 11.000000000000004, 2, 61, 3.0, 46.8, 57.54999999999996, 61.0, 33.68893879842785, 8.619630825379001, 9.014423076923077], "isController": false}, {"data": ["Create booking", 60, 0, 0.0, 9.100000000000003, 2, 47, 4.0, 30.799999999999997, 37.949999999999996, 47.0, 35.252643948296125, 14.838930302585194, 16.111559929494714], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 90, 0, 0.0, 179.36666666666673, 2, 638, 166.0, 335.70000000000005, 362.5, 638.0, 0.7732689515332205, 0.8623761158700565, 0.24265340796810697], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["Get booking", 30, 0, 0.0, 335.2666666666666, 309, 563, 326.5, 356.50000000000006, 455.7499999999999, 563.0, 0.25821778087639113, 0.6889169700725593, 0.05547647636016216], "isController": false}, {"data": ["Login", 30, 0, 0.0, 4.933333333333332, 2, 35, 4.0, 6.0, 19.59999999999998, 35.0, 0.2588549980585875, 0.06623047801889642, 0.06926393502739549], "isController": false}, {"data": ["Create booking", 30, 0, 0.0, 197.89999999999998, 156, 638, 166.0, 185.8, 634.15, 638.0, 0.2585538222873395, 0.10907739377747135, 0.11867216452641557], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
@@ -228,7 +228,7 @@ $(document).ready(function() {
     }, [[1, 1]]);
 
         // Create top5 errors by sampler
-    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 180, 0, null, null, null, null, null, null, null, null, null, null], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": [], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}]}, function(index, item){
+    createTable($("#top5ErrorsBySamplerTable"), {"supportsControllersDiscrimination": false, "overall": {"data": ["Total", 90, 0, null, null, null, null, null, null, null, null, null, null], "isController": false}, "titles": ["Sample", "#Samples", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors", "Error", "#Errors"], "items": [{"data": [], "isController": false}, {"data": [], "isController": false}, {"data": [], "isController": false}]}, function(index, item){
         return item;
     }, [[0, 0]], 0);
 
